@@ -50,7 +50,7 @@ CREATE TABLE jugadores (
     idEstado INT NOT NULL,
     PRIMARY KEY (idJugador),
     FOREIGN KEY (idNacionalidad) REFERENCES paises(idPais),
-    FOREIGN KEY (idEstado) REFERENCES estado(id)
+    FOREIGN KEY (idEstado) REFERENCES estado(idEstado)
 );
 
 CREATE TABLE clubes (
