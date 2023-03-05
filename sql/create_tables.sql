@@ -50,7 +50,7 @@ CREATE TABLE jugadores (
     idEstado INT NOT NULL,
     PRIMARY KEY (idJugador),
     FOREIGN KEY (idNacionalidad) REFERENCES paises(idPais),
-    FOREIGN KEY (idEstado) REFERENCES estado(id)
+    FOREIGN KEY (idEstado) REFERENCES estado(idEstado)
 );
 
 CREATE TABLE clubes (
@@ -65,14 +65,6 @@ CREATE TABLE clubes (
     FOREIGN KEY (idLiga) REFERENCES ligas(idLiga)
 );
 
-CREATE TABLE ligas (
-	idLiga INT NOT NULL AUTO_INCREMENT,
-    liga VARCHAR(500) NOT NULL,
-    idPais INT NOT NULL,
-    PRIMARY KEY (idLiga),
-    FOREIGN KEY (idPais) REFERENCES paises(idPais)
-);
-
 CREATE TABLE jugadoresClubes (
 	idJugadorClub INT NOT NULL AUTO_INCREMENT,
 	idJugador INT NOT NULL,
@@ -83,6 +75,16 @@ CREATE TABLE jugadoresClubes (
     PRIMARY KEY (idJugadorClub),
     FOREIGN KEY (idJugador) REFERENCES jugadores(idJugador),
     FOREIGN KEY (idClub) REFERENCES clubes(idClub)
-)
+);
 
+CREATE TABLE jugadoresPosiciones (
+	idJugadorPosicion INT NOT NULL AUTO_INCREMENT,
+    idJugador INT NOT NULL,
+    idPosicion INT NOT NULL,
+    PRIMARY KEY (idJugadorPosicion),
+    FOREIGN KEY (idJugador) REFERENCES jugadores(idJugador),
+    FOREIGN KEY (idPosicion) REFERENCES posicion(idPosicion)
+);
+
+ALTER TABLE estado RENAME estado_actividad;
 	
