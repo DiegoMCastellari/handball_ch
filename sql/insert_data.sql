@@ -1,3 +1,5 @@
+use handball;
+
 INSERT INTO posicion (posicion)
 VALUES
 ("Back"),
@@ -132,11 +134,7 @@ VALUES
 ("Zubří", "21"),("Zukowo", "55"),("Zurich", "69"),("Zvornik", "11"),("Zwartemeer", "52"),("Zwolen", "55"),("Zürich", "69"),("kofljica", "65"),
 ("Önnered", "68"),("Ølstykke", "22"),("Čakovec", "18"),("Črnomelj", "65"),("Šabac", "62"),("Šaľa", "64"),("Šiauliai", "45"),("Škofja Loka", "65"),
 ("Šmartno pri Litiji", "65"),("Železniki", "65"),("Žitoradja", "62"),("Živinica", "11"),("Župa dubrovačka", "18"),("nan", "6"),("nan", "7"),("nan", "10"),
-("nan", "34"),("nan", "44"),("nan", "45"),("nan", "47"),("nan", "48"),("nan", "52");
-
-INSERT INTO ciudades (ciudad, idPais)
-VALUES
-("Mogilev", "9");
+("nan", "34"),("nan", "44"),("nan", "45"),("nan", "47"),("nan", "48"),("nan", "52"),("Mogilev", "9");
 
 INSERT INTO arenas (arena, capacidad)
 VALUES
